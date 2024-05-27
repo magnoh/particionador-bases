@@ -192,7 +192,7 @@ class Window:
 
         for chunk in pd.read_csv(self.filename, delimiter=delimiter, encoding='latin1', chunksize=chunksize):
             output = f'{self.output_path}/{output_name}{index}.csv'
-            chunk.to_csv(output, sep=',' ,encoding='latin1' ,index=False)
+            chunk.to_csv(output, sep=';' ,encoding='latin1' ,index=False)
             index += 1
 
             progress = min((index / num_parts) * 100, 100)
@@ -225,9 +225,7 @@ class Window:
             elif header.find(",") != -1:
                 separador = ","
 
-            return separador
-        
-
+        return separador
 
 
 Window()

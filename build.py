@@ -6,7 +6,6 @@ image_path = os.path.join(BASE_DIR, 'atualizar-pares-de-setas-em-circulo.png')
 
 PyInstaller.__main__.run([
     'particionamento.py',
-    '--onefile',
     '--noconsole',
     '--name',
     'particionador de bases',
